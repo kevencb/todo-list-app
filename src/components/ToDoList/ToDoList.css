@@ -1,0 +1,7 @@
+.todo__list {
+    margin: 2.4rem auto 6.4rem;
+}
+
+.todo__list ul {
+    list-style: none;
+}

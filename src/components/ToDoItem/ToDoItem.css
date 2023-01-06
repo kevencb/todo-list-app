@@ -1,0 +1,64 @@
+.todo__item {
+    align-items: center;
+    display: grid;
+    font-size: 1.5rem;
+    font-weight: 300;
+    gap: 2rem;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    line-height: 2.2rem;
+    max-width: 40rem;
+    padding: 1.6rem 1.4rem;
+    position: relative;
+    width: 100%;
+}
+
+.todo__item:nth-child(2n+1) {
+    background-color: rgba(247, 247, 247, 0.5);
+}
+
+.status {
+    background-color: var(--green);
+    border-radius: 1rem;
+    height: 10px;
+    width: 10px;
+}
+
+.todo__actions {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.todo__actions span {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 3.2rem;
+    justify-content: center;
+    width: 3.2rem;
+}
+
+.todo__actions--check i,
+.todo__actions--delete i {
+    font-size: 2rem;
+}
+
+
+.todo__actions--check i.complete {
+    color: var(--green);
+    /* cursor: not-allowed; */
+}
+
+.todo__actions--check i.no-complete {
+    color: var(--orange);
+}
+
+.todo__actions--delete i {
+    color: var(--pink);
+}
+
+.disabled {
+    text-decoration: line-through;
+}

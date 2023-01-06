@@ -1,0 +1,74 @@
+.header {
+    margin-top: 3.2rem;
+}
+
+.header .menu {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .menu i {
+    color: var(--purple);
+    font-size: 2.4rem;
+}
+
+.header__info {
+    margin: 2.4rem auto 0.8rem;
+}
+
+h2.header__hello {
+    color: var(--purple);
+    font-size: 4.8rem;
+    font-weight: 100;
+}
+
+h2.header__name-user {
+    color: var(--purple);
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+h3.header__date {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+h3.header__date span {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.tasks {
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-start;
+    margin: 1.6rem auto;
+}
+
+.tasks__created,
+.tasks__completed {
+    align-items: center;
+    color: var(--purple);
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+
+
+    padding: 1.6rem 0;
+}
+
+.tasks__created i,
+.tasks__completed i {
+    font-size: 2rem;
+}
+
+.task__number {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.task__text {
+    font-size: 1.2rem;
+    font-weight: 300;
+}

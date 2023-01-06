@@ -1,0 +1,22 @@
+.todo-button {
+    align-items: center;
+    background-color: transparent;
+    bottom: 0;
+    display: flex;
+    height: auto;
+    justify-content: flex-end;
+    padding: 1.6rem;
+    position: fixed;
+    width: 100%;
+}
+
+.todo-button button {
+    background: var(--dark-three);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 3.2rem;
+    height: 5.6rem;
+    width: 5.6rem;
+}
