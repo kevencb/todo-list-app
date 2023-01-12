@@ -36,15 +36,6 @@ function App() {
 		})
 	}
 
-	/* Cambio del estado de la tarea */
-	// const completeTodo = (id) => {
-	// 	console.log(`Estamos terminando laaa tarea: ${id}`)
-	// 	const todoIndex = todos.findIndex(todo => todo.id === id)
-	// 	const newTodos = [...todos]
-	// 	newTodos[todoIndex].completed = true
-	// 	setTodos(newTodos)
-	// }
-
 	const completedTodo = (id) => {
 		const updateList = todos.map(todo => {
 			if (todo.id === id) {
@@ -58,10 +49,8 @@ function App() {
 
 	/* Eliminar tarea */
 	const deleteTodo = (id) => {
-		const todoIndex = todos.findIndex(todo => todo.id === id)
-		const newTodos = [...todos]
-		newTodos.splice(id, 1)
-		setTodos(newTodos)
+		const updateList = todos.filter(todo => todo.id !== id)
+		setTodos(updateList)
 	}
 
 	return (
