@@ -4,28 +4,19 @@ import { ToDoSearch } from '../components/ToDoSearch/ToDoSearch'
 import { ToDoList } from '../components/ToDoList/ToDoList'
 import { ToDoItem } from '../components/ToDoItem/ToDoItem'
 import { CreateToDoButton } from '../components/CreateToDoButton/CreateToDoButton';
+import { TodoContext, TodoProvider } from '../TodoContext/TodoContext';
+import { Modal } from '../Modal/Modal';
+import { ToDoForm } from '../components/ToDoForm/ToDoForm';
 
-const AppUI = ({
-    loading,
-    error,
-    todosTotal,
-    todosCompleted,
-    searchValue,
-    setSearchValue,
-    searchedTodos,
-    completedTodo,
-    deleteTodo
-}) => {
+const AppUI = () => {
+
+    const { error, loading, searchedTodos, completedTodo, deleteTodo, openModal, setOpenModal } = React.useContext(TodoContext)
+
     return (
         <>
-            <ToDoCounter
-                todosTotal={todosTotal}
-                todosCompleted={todosCompleted}
-            />
-            <ToDoSearch
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-            />
+            <ToDoCounter />
+            <ToDoSearch />
+
             <ToDoList>
                 {error && <p>Tenemos problemas para cargar tus tareas. Intenta nuevamente.</p>}
                 {loading && <p>Estamos cargando tus tareas...</p>}
@@ -40,7 +31,13 @@ const AppUI = ({
                     />
                 ))}
             </ToDoList>
-            <CreateToDoButton />
+            {!!openModal && (
+                <Modal>
+                    <ToDoForm />
+                </Modal>
+            )
+            }
+            <CreateToDoButton setOpenModal={setOpenModal} />
         </>
     );
 }

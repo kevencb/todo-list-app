@@ -2,10 +2,10 @@ import React from 'react'
 import '../../index.css'
 import './CreateToDoButton.css'
 
-const CreateToDoButton = () => {
+const CreateToDoButton = ({ setOpenModal }) => {
 
     const addTask = () => {
-        alert('Diste Click')
+        setOpenModal(preveState => !preveState)
     }
 
     return (

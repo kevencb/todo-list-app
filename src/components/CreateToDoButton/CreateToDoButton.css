@@ -8,6 +8,7 @@
     padding: 1.6rem;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .todo-button button {

@@ -1,8 +1,11 @@
 import React from 'react'
 import '../../index.css'
+import { TodoContext } from '../../TodoContext/TodoContext'
 import './ToDoSearch.css'
 
-const ToDoSearch = ({ searchValue, setSearchValue }) => {
+const ToDoSearch = () => {
+
+    const { searchValue, setSearchValue } = React.useContext(TodoContext)
 
     const searchTask = (e) => {
         setSearchValue(e.target.value)
@@ -17,7 +20,6 @@ const ToDoSearch = ({ searchValue, setSearchValue }) => {
                     value={searchValue}
                 />
             </div>
-            {searchValue}
         </>
     );
 }
