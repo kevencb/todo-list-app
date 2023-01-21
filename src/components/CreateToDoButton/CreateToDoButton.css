@@ -12,7 +12,7 @@
 }
 
 .todo-button button {
-    background: var(--dark-three);
+    background: var(--pink);
     border: none;
     border-radius: 50%;
     color: #fff;

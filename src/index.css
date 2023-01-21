@@ -24,11 +24,86 @@ html {
 body {
     background-color: var(--white);
     color: var(--gray);
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 .container {
     margin: 0 auto;
     max-width: 46rem;
     width: 90%;
+}
+
+form {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 460px;
+    padding: 32px 0;
+    width: 80%;
+}
+
+form i {
+    color: var(--purple);
+    font-size: 32px;
+}
+
+form h2 {
+    color: var(--purple);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    width: 75%;
+}
+
+form h2 span {
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 100;
+}
+
+form textarea {
+    border: 1px solid var(--dark-three);
+    border-radius: 4px;
+    color: var(--gray);
+    font-size: inherit;
+    font-size: 14px;
+    height: 120px;
+    margin: 24px;
+    padding: 12px;
+    resize: none;
+    width: 85%;
+}
+
+form textarea:focus {
+    border: none;
+    outline: 1px solid var(--green);
+}
+
+.buttons__content {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.buttons__content button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px 32px;
+}
+
+.buttons__content button:nth-child(1) {
+    background-color: var(--white);
+    border: 1px solid var(--dark-three);
+}
+
+.buttons__content button:nth-child(2) {
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    color: var(--white);
 }
